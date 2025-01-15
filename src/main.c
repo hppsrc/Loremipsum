@@ -6,8 +6,8 @@
 // * Source code on: https://github.com/hppsrc/loremipsum
 // * Under LGPLv3 license feel free to modify, distribute and use this code for any purpose.
 
-#define VERSION "0.2.0-alpha"
-#define BUILD "250114191"
+#define VERSION "0.2.1-alpha"
+#define BUILD "250114192"
 #define STRING "LOREMIPSUM" // String has to be uppercase
 
 #define ERROR printf_clrstr("error:", RED, NONE, END)
@@ -168,7 +168,7 @@ int main(int argc, char *argv[]) {
 
             if ( !strcmp(argv[1], "--help") ) {
 
-                printf("OVERVIEW: Loremipsum Interpreter\n\nUSAGE: %s [option] file...\n\nOPTIONS:\n\n", printf_clrstr("lintr.exe", YELLOW, NONE, END));
+                printf("OVERVIEW: Loremipsum Interpreter\n\nUSAGE: %s [option] file...\n\nOPTIONS:\n\n", printf_clrstr("linter.exe", YELLOW, NONE, END));
                 printf("  %s\t\tTranscribe the .loremipsum file into a .txt.\n", printf_clrstr("--o", CYAN, NONE, END));
                 printf("  %s\t\tOpen Loremipsum github repo.\n", printf_clrstr("--git", CYAN, NONE, END));
                 printf("  %s\tGet this message.\n", printf_clrstr("--help", CYAN, NONE, END));

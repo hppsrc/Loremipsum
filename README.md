@@ -2,7 +2,7 @@
 
 Loremipsum is an “interpreter” made on C that converts a string “Loremipsum” to an ASCII character.
 
-Current version: **0.2.0-alpha**
+Current version: **0.2.1-alpha**
 
 > [!WARNING]
 > Loremipsum is currently in ***ALPHA***, much of what is said here may not be implemented yet. ***Be careful!***
@@ -36,7 +36,7 @@ Using clang 19.1.4 (via MSYS2)
 
 Download last binaries for:
 
-- [Windows (x64)](https://github.com/hppsrc/Loremipsum/releases/download/0.2.0-alpha/linter_x86_64.exe).
+- [Windows (x64)](https://github.com/hppsrc/Loremipsum/releases/download/0.2.1-alpha/linter_x86_64.exe).
 
 ### Installing ⚙️
 
@@ -46,7 +46,7 @@ Download last binaries for:
 
 - You must pass as argument a file of the type `.loremipsum`.
 
-        lintr.exe file.loremipsum
+        linter.exe file.loremipsum
 
 The file format is as follows:
 
@@ -75,7 +75,7 @@ At each match, 1 or 32 is added to the position array based on the current line.
 
 Run the next switch to get help.
 
-        lintr.exe --help
+        linter.exe --help
 
 ## License 🔑
 
