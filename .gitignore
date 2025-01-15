@@ -5,3 +5,14 @@
 
 # Folders
 .vscode
+
+# Object files
+*.o
+
+# Resource Files
+*.aps
+*.res
+*.manifest
+
+# Etc
+*.loremipsum
