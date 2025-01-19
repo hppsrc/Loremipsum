@@ -2,41 +2,42 @@
 
 Loremipsum is an “interpreter” made on C that converts a string “Loremipsum” to an ASCII character.
 
-Current version: **0.2.1-alpha**
+Current version: **0.2.2-alpha**
 
 > [!WARNING]
 > Loremipsum is currently in ***ALPHA***, much of what is said here may not be implemented yet. ***Be careful!***
 
-> [!NOTE]
-> The project aims at a code compatible with Windows and Linux (preferably Arch, so far not tested).
->
-> But because of the way C is, it will most likely work.
-
 ## Getting Started 🎯
 
-### Dependencies 🗃️
+### Dependencies / Requirements 🗃️
 
-- [CLRSTR.h](https://github.com/hppsrc/libs/blob/main/C/CLRSTR.h) (Build 25011316)
+#### Dependencies
+
+- [CLRSTR.h](https://github.com/hppsrc/libs/blob/main/C/CLRSTR.h) (Build 25011820)
+
+#### Requirements
+
+- `clang >19`
+  - via MSYS2 for Windows
 
 ### Build yourself 🛠️
 
-#### Windows
+- Using `make`:
 
-Using clang 19.1.4 (via MSYS2)
+        make build
 
-- Compile resources:
+> [!NOTE]
+> Usning make doesn't add an icon to the executable, use `windows_build.bat` in case you want an icon with the exe.
 
-        windres .\src\res\res.rc -O coff -o app.res
-
-- Compile source code:
-
-        clang .\src\main.c app.res
+> [!NOTE]
+> The makefile doesn't allow you to create a Linux binary from Windows, only from Linux to Windows.
 
 ### Download ⬇️
 
 Download last binaries for:
 
-- [Windows (x64)](https://github.com/hppsrc/Loremipsum/releases/download/0.2.1-alpha/linter_x86_64.exe).
+- [Windows x64](https://github.com/hppsrc/Loremipsum/releases/download/0.2.2-alpha/linter_Windows_x86_64.exe)
+- [Linux x64](https://github.com/hppsrc/Loremipsum/releases/download/0.2.2-alpha/linter_Linux_x86_64.tar.gz)
 
 ### Installing ⚙️
 
@@ -44,28 +45,33 @@ Download last binaries for:
 
 ### Using Loremipsum 💻
 
-- You must pass as argument a file of the type `.loremipsum`.
+- You must pass as argument a file of the type `.loremipsum`:
 
         linter.exe file.loremipsum
+
+- You can also use some flags:
+
+        linter.exe --o file.loremipsum
+
+> [!WARNING]
+> No flags have been implemented yet
 
 The file format is as follows:
 
 ```JS
-
 LOREMIPSUM LOREMIPSUM loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum 
 LOREMIPSUM LOREMIPSUM LOREMIPSUM loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum loremipsum 
-
 ```
 
 This code gives you as output `Hi`.
 
 Uppercase `LOREMIPSUM` is 32.
 
-lowercase `loremipsum` is 1.
+Lowercase `loremipsum` is 1.
 
 The file can have a maximum of 255 lines, any extra line will be ignored.
 
-Each line is interpreted one by one and stored in the array, at the end of which the result or an error message is printed.
+Each line is interpreted one by one and stored in the array, at the end of which the result or an error message is printed, also as to end with a space.
 
 At each match, 1 or 32 is added to the position array based on the current line.
 
@@ -83,8 +89,8 @@ This project is licensed under the GNU Lesser General Public License v3.0 (LGPLv
 
 ## TODO ✔️
 
-- [ ] Ensure compatibility with Windows and Linux.
-- [ ] Arch Linux build.
+- [x] Ensure compatibility with Windows and Linux.
+- [x] Linux build.
 - [ ] Proper code documentation.
 
 ## Known Errors 🐞

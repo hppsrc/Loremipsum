@@ -14,5 +14,5 @@
 *.res
 *.manifest
 
-# Etc
-*.loremipsum
+#Extra
+*.tar.gz

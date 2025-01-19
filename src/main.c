@@ -6,8 +6,8 @@
 // * Source code on: https://github.com/hppsrc/loremipsum
 // * Under LGPLv3 license feel free to modify, distribute and use this code for any purpose.
 
-#define VERSION "0.2.1-alpha"
-#define BUILD "250114192"
+#define VERSION "0.2.2-alpha"
+#define BUILD "250118211"
 #define STRING "LOREMIPSUM" // String has to be uppercase
 
 #define ERROR printf_clrstr("error:", RED, NONE, END)
@@ -19,7 +19,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-#include "lib/CLRSTR.h"
+#include "../lib/CLRSTR.h"
 
 char _STRING_[255];
 char _LOW_STRING_[255];
@@ -114,7 +114,6 @@ char* run_file(char file_name[]) {
 int file_check(char file_name[]) {
 
     FILE *file;
-    char content[255];
     int arr[255];
     for (size_t i = 0; i < 255; i++) { arr[i] = 0; }
 
@@ -212,7 +211,7 @@ int main(int argc, char *argv[]) {
 
             if (file_check(argv[1]) == 0) {
                 
-                printf("%s",run_file(argv[1]));
+                printf("%s\n",run_file(argv[1]));
                 
             }
 
