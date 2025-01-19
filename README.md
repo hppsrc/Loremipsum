@@ -18,16 +18,16 @@ Current version: **0.2.2-alpha**
 #### Requirements
 
 - `clang >19`
-  - via MSYS2 for Windows
+  - via MSYS2 for Windows. (using CLANG64)
+
+- `mingw-w64-gcc`
+  - for Windows Building on Linux.
 
 ### Build yourself 🛠️
 
 - Using `make`:
 
         make build
-
-> [!NOTE]
-> Usning make doesn't add an icon to the executable, use `windows_build.bat` in case you want an icon with the exe.
 
 > [!NOTE]
 > The makefile doesn't allow you to create a Linux binary from Windows, only from Linux to Windows.
@@ -75,7 +75,7 @@ Each line is interpreted one by one and stored in the array, at the end of which
 
 At each match, 1 or 32 is added to the position array based on the current line.
 
-- [Reference](https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html)
+- [Reference](https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html).
 
 ## Help ❓
 
